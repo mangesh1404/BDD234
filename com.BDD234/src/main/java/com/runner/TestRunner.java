@@ -9,7 +9,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/main/java/com/features",
 		glue="com.stepdefs",
-		plugin="html:target"
+		plugin="html:target",
+		dryRun=false,// used for compile feature file
+		monochrome=true// to get the readable output
+		//tags="@logo" // to run a specific scenario
 		)
 
 public class TestRunner {
